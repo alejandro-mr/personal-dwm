@@ -36,24 +36,25 @@ static const char colors[NUMCOLORS][MAXCOLORS][9] = {
 };
 
 static const char *fonts[] = {
-    "Sans:size=10.5",
-    "VL Gothic:size=10.5",
-    "WenQuanYi Micro Hei:size=10.5",
+    "ohsnap.icons-medium-r-normal-*-14-*-*-*-*-*-*-*",
+    //"Sans:size=10.5",
+    //"VL Gothic:size=10.5",
+    //"WenQuanYi Micro Hei:size=10.5",
 };
-static const char dmenufont[] = "-*-terminus-medium-r-*-*-16-*-*-*-*-*-*-*";
-static const char normbordercolor[] = "#444444";
-static const char normbgcolor[]     = "#222222";
-static const char normfgcolor[]     = "#bbbbbb";
-static const char selbordercolor[]  = "#005577";
-static const char selbgcolor[]      = "#005577";
-static const char selfgcolor[]      = "#eeeeee";
+static const char dmenufont[] = "-*-ohsnap.icons-medium-r-*-*-14-*-*-*-*-*-*-*";
+//static const char normbordercolor[] = colors[0][0];
+//static const char normbgcolor[]     = colors[0][2];
+//static const char normfgcolor[]     = colors[0][1];
+//static const char selbordercolor[]  = colors[1][0];
+//static const char selbgcolor[]      = colors[1][2];
+//static const char selfgcolor[]      = colors[1][1];
 static const unsigned int borderpx  = 1;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const Bool showbar           = True;     /* False means no bar */
 static const Bool topbar            = True;     /* False means bottom bar */
 
 /* tagging */
-static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
+static const char *tags[] = { "test", "2", "3", "4", "5", "6", "7", "8", "9" };
 
 static const Rule rules[] = {
 	/* xprop(1):
@@ -92,7 +93,7 @@ static const Layout layouts[] = {
 
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
-static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", normbgcolor, "-nf", normfgcolor, "-sb", selbgcolor, "-sf", selfgcolor, NULL };
+static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", colors[0][2], "-nf", colors[0][1], "-sb", colors[1][2], "-sf", colors[1][1], NULL };
 static const char *termcmd[]  = { "urxvt", NULL };
 
 static Key keys[] = {
