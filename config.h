@@ -2,7 +2,7 @@
 #include "gaplessgrid.c"
 
 /* appearance */
-#define NUMCOLORS 5
+#define NUMCOLORS 8
 static const char colors[NUMCOLORS][MAXCOLORS][9] = {
     // border     fg         bg
     { "#ababab", "#7d7d7d", "#020202" },  // 01 - normal
@@ -10,12 +10,12 @@ static const char colors[NUMCOLORS][MAXCOLORS][9] = {
     { "#B3354C", "#B3354C", "#020202" },  // 03 - urgent
     { "#FFA500", "#FFA500", "#020202" },  // 14 - orange
     { "#20b2e7", "#20b2e7", "#020202" },  // 0F - White
+    { "#608040", "#608040", "#020202" },  // 06 - green
+    { "#B1D354", "#B1D354", "#020202" },  // 0F - light green
+    { "#55b521", "#55b521", "#020202" },  // 0F - strong green
 //    { "#00FF00", "#20b2e7", "#00FF00" },  // 04 - black
 //    { "#20b2e7", "#20b2e7", "#020202" },  // 0F - White
-
-
 //    { "#FF0000", "#FF0000", "#020202" },  // 05 - red
-//    { "#608040", "#608040", "#020202" },  // 06 - green
 //    { "#877C43", "#877C43", "#020202" },  // 07 - yellow
 //    { "#1C678C", "#1C678C", "#020202" },  // 08 - blue
 //    { "#E300FF", "#E300FF", "#020202" },  // 09 - magenta
@@ -24,7 +24,6 @@ static const char colors[NUMCOLORS][MAXCOLORS][9] = {
 //    { "#808080", "#808080", "#020202" },  // 0C - light gray
 //    { "#4C4C4C", "#4C4C4C", "#020202" },  // 0D - gray
 //    { "#FFEE00", "#FFEE00", "#020202" },  // 0E - yellow2
-///*    { "#B1D354", "#B1D354", "#020202" },  // 0F - light green */
 //    { "#20b2e7", "#20b2e7", "#020202" },  // 0F - White
 //    { "#BF9F5F", "#BF9F5F", "#020202" },  // 10 - light yellow
 //    { "#3995BF", "#3995BF", "#020202" },  // 11 - light blue
@@ -54,7 +53,8 @@ static const Bool showbar           = True;     /* False means no bar */
 static const Bool topbar            = True;     /* False means bottom bar */
 
 /* tagging */
-static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
+//static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
+static const char *tags[] = { "ÿ", "ý", "ü", "þ", "5", "6", "7", "8", "9" };
 
 static const Rule rules[] = {
 	/* xprop(1):
